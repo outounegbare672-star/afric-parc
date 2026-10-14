@@ -407,6 +407,7 @@
 }
 
 .site-nav a,
+.site-nav button,
 .header-login {
   color: #68736b;
   font-size: 0.88rem;
@@ -416,8 +417,15 @@
 
 .site-nav a:hover,
 .site-nav a.active,
+.site-nav button:hover,
 .header-login:hover {
   color: var(--forest);
+}
+
+.site-nav button {
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .site-actions {
@@ -1323,6 +1331,10 @@
     font-size: 0.8rem;
   }
 
+  .site-nav button {
+    font-size: 0.8rem;
+  }
+
   .site-actions {
     gap: 12px;
   }
@@ -1389,6 +1401,10 @@
   }
 
   .site-nav a {
+    font-size: 0.72rem;
+  }
+
+  .site-nav button {
     font-size: 0.72rem;
   }
 

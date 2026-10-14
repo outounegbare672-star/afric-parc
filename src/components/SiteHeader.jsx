@@ -1,7 +1,23 @@
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { ArrowUpRight, CircleUserRound } from 'lucide-react'
 
 function SiteHeader() {
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const scrollToHowItWorks = (event) => {
+    event.preventDefault()
+    const scroll = () => document.getElementById('fonctionnement')?.scrollIntoView({ behavior: 'smooth' })
+
+    if (location.pathname !== '/') {
+      navigate('/')
+      window.setTimeout(scroll, 0)
+      return
+    }
+
+    scroll()
+  }
+
   return (
     <header className="site-header">
       <Link className="site-brand" to="/" aria-label="Afric-Parc, accueil">
@@ -12,7 +28,7 @@ function SiteHeader() {
       <nav className="site-nav" aria-label="Navigation principale">
         <NavLink to="/" end>Accueil</NavLink>
         <NavLink to="/machines">Nos engins</NavLink>
-        <a href="#fonctionnement">Comment ça marche</a>
+        <button type="button" onClick={scrollToHowItWorks}>Comment ça marche</button>
       </nav>
 
       <div className="site-actions">
