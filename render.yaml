@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: afric-parc
+    runtime: static
+    branch: main
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    autoDeploy: true

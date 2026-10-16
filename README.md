@@ -26,3 +26,5 @@ npm run build
 ## Publication
 
 Le site est publié sur GitHub Pages par le workflow `.github/workflows/deploy.yml` à chaque mise à jour de `main`. Le dépôt doit avoir GitHub Pages configuré avec la source **GitHub Actions**.
+
+Render peut aussi déployer le site comme site statique à partir de `render.yaml`. Connectez le dépôt GitHub `outounegbare672-star/afric-parc` à Render et créez un Blueprint depuis ce fichier. Les mises à jour de la branche `main` seront déployées automatiquement.
